@@ -20,7 +20,17 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 def scan_port(host: str, port: int, timeout: float) -> tuple[int, bool]:
-    """Attempt a TCP connection to host:port. Returns (port, is_open)."""
+    """Attempt a TCP connection to host:port.
+
+    Args:
+        host: Target IP address or hostname.
+        port: TCP port number to test.
+        timeout: Seconds to wait before giving up on the connection.
+
+    Returns:
+        A tuple of (port, is_open) where is_open is True if the port accepted
+        the connection and False otherwise.
+    """
     try:
         with socket.create_connection((host, port), timeout=timeout):
             return port, True
@@ -29,7 +39,18 @@ def scan_port(host: str, port: int, timeout: float) -> tuple[int, bool]:
 
 
 def run_scan(host: str, start_port: int, end_port: int, timeout: float, max_workers: int = 100) -> list[int]:
-    """Scan ports in [start_port, end_port] on host concurrently. Returns sorted list of open ports."""
+    """Scan ports in [start_port, end_port] on host concurrently.
+
+    Args:
+        host: Target IP address or hostname.
+        start_port: First port number in the scan range (inclusive).
+        end_port: Last port number in the scan range (inclusive).
+        timeout: Per-port TCP connection timeout in seconds.
+        max_workers: Maximum number of concurrent scanning threads.
+
+    Returns:
+        A sorted list of open port numbers.
+    """
     open_ports: list[int] = []
     ports = range(start_port, end_port + 1)
 
@@ -44,7 +65,17 @@ def run_scan(host: str, start_port: int, end_port: int, timeout: float, max_work
 
 
 def resolve_host(host: str) -> str:
-    """Resolve hostname to IP address."""
+    """Resolve hostname to IP address.
+
+    Args:
+        host: Hostname or IP string to resolve.
+
+    Returns:
+        The resolved IPv4 address string.
+
+    Raises:
+        SystemExit: Exits with code 1 if the hostname cannot be resolved.
+    """
     try:
         return socket.gethostbyname(host)
     except socket.gaierror as exc:
