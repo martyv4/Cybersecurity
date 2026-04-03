@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Security-Policy"
+      content="default-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'none'; script-src 'none'; upgrade-insecure-requests">
+    <meta name="referrer" content="no-referrer">
   <title>Cybersecurity Links</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
@@ -14,6 +17,14 @@
       --accent-light: #e8f5ee;
       --text: #1c1c1c;
       --muted: #6b6b6b;
+    }
+
+    .section-title {
+      font-weight: bold;
+      color: var(--accent);
+      margin-top: 1rem;
+      font-size: 1.15rem;
+      margin-bottom: 0.2rem;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -93,61 +104,61 @@
     <div class="links-list">
 
       <!-- Tools & Platforms -->
-      <span style="font-weight: bold; color: var(--accent); margin-top: 1rem;">Tools & Platforms</span>
-      <a class="link-row" href="https://www.wireshark.org/" target="_blank">
+      <h2 class="section-title">Tools & Platforms</h2>
+      <a class="link-row" href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">Wireshark</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://www.kali.org/" target="_blank">
+      <a class="link-row" href="https://www.kali.org/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">Kali Linux</span>
         <span class="link-arrow">→</span>
       </a>
 
       <!-- Training & Careers -->
-      <span style="font-weight: bold; color: var(--accent); margin-top: 1rem;">Training & Careers</span>
-      <a class="link-row" href="https://www.cyberseek.org/" target="_blank">
+      <h2 class="section-title">Training & Careers</h2>
+      <a class="link-row" href="https://www.cyberseek.org/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">CyberSeek</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://www.sans.org/" target="_blank">
+      <a class="link-row" href="https://www.sans.org/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">SANS Institute</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://www.youtube.com/playlist?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H" target="_blank">
+      <a class="link-row" href="https://www.youtube.com/playlist?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H" target="_blank" rel="noopener noreferrer">
         <span class="link-name">YouTube: Cybersecurity Playlist</span>
         <span class="link-arrow">→</span>
       </a>
 
       <!-- Government & Standards -->
-      <span style="font-weight: bold; color: var(--accent); margin-top: 1rem;">Government & Standards</span>
-      <a class="link-row" href="https://www.cisa.gov/" target="_blank">
+      <h2 class="section-title">Government & Standards</h2>
+      <a class="link-row" href="https://www.cisa.gov/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">CISA (Cybersecurity & Infrastructure Security Agency)</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://www.nist.gov/cyberframework" target="_blank">
+      <a class="link-row" href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">
         <span class="link-name">NIST Cybersecurity Framework</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://csrc.nist.gov/glossary" target="_blank">
+      <a class="link-row" href="https://csrc.nist.gov/glossary" target="_blank" rel="noopener noreferrer">
         <span class="link-name">NIST Cybersecurity Glossary</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://csrc.nist.gov/projects/risk-management/about-rmf" target="_blank">
+      <a class="link-row" href="https://csrc.nist.gov/projects/risk-management/about-rmf" target="_blank" rel="noopener noreferrer">
         <span class="link-name">NIST Risk Management Framework</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://www.nccoe.nist.gov/ai/adversarial-machine-learning" target="_blank">
+      <a class="link-row" href="https://www.nccoe.nist.gov/ai/adversarial-machine-learning" target="_blank" rel="noopener noreferrer">
         <span class="link-name">NCCoE: Adversarial Machine Learning</span>
         <span class="link-arrow">→</span>
       </a>
 
       <!-- Research & Organizations -->
-      <span style="font-weight: bold; color: var(--accent); margin-top: 1rem;">Research & Organizations</span>
-      <a class="link-row" href="https://www.owasp.org/" target="_blank">
+      <h2 class="section-title">Research & Organizations</h2>
+      <a class="link-row" href="https://www.owasp.org/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">OWASP Foundation</span>
         <span class="link-arrow">→</span>
       </a>
-      <a class="link-row" href="https://ccdcoe.org/research/tallinn-manual/" target="_blank">
+      <a class="link-row" href="https://ccdcoe.org/research/tallinn-manual/" target="_blank" rel="noopener noreferrer">
         <span class="link-name">Tallinn Manual (CCDCOE)</span>
         <span class="link-arrow">→</span>
       </a>
